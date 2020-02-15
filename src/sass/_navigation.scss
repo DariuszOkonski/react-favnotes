@@ -1,0 +1,52 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $color-light-gray;
+  padding: 0.5rem;
+
+  display: flex;
+  flex-direction: column;
+
+  .btn {
+    margin-top: 0.2rem;
+    align-self: flex-start;
+  }
+
+  @media(orientation: landscape) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+
+  .logo-nav {
+    display: flex;
+
+    &__header {
+      font-size: 1.2rem;
+    }
+
+    &__items {
+      display: flex;
+
+    }
+
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      a {
+        margin: 0 1rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .active {
+    font-weight: bold;
+    color: $color-blue;
+  }
+}
