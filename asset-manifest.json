@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.js": "/react-favnotes/static/js/main.ae3d557d.chunk.js",
+    "main.js.map": "/react-favnotes/static/js/main.ae3d557d.chunk.js.map",
+    "runtime-main.js": "/react-favnotes/static/js/runtime-main.f3bc6131.js",
+    "runtime-main.js.map": "/react-favnotes/static/js/runtime-main.f3bc6131.js.map",
+    "static/js/2.c4405265.chunk.js": "/react-favnotes/static/js/2.c4405265.chunk.js",
+    "static/js/2.c4405265.chunk.js.map": "/react-favnotes/static/js/2.c4405265.chunk.js.map",
+    "index.html": "/react-favnotes/index.html",
+    "precache-manifest.d03cb346f7afae2cf8ef1ddba4b27ff2.js": "/react-favnotes/precache-manifest.d03cb346f7afae2cf8ef1ddba4b27ff2.js",
+    "service-worker.js": "/react-favnotes/service-worker.js",
+    "static/js/2.c4405265.chunk.js.LICENSE.txt": "/react-favnotes/static/js/2.c4405265.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f3bc6131.js",
+    "static/js/2.c4405265.chunk.js",
+    "static/js/main.ae3d557d.chunk.js"
+  ]
+}
