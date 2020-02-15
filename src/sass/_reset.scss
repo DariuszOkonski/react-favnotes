@@ -12,6 +12,7 @@ html,
 body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
+  min-height: 200vh;
 
   @media(min-width: 1025px) {
     font-size: 22px;
@@ -26,4 +27,14 @@ ul {
 
 a {
   text-decoration: none;
+  color: $color-black;
+}
+
+// utilities
+.btn {
+  display: inline-block;
+  border: 1px solid $color-blue;
+  padding: 0.2rem 0.6rem;
+  background-color: $color-blue;
+  color: $color-white;
 }
