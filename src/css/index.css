@@ -12,6 +12,7 @@ html,
 body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
+  min-height: 200vh;
 }
 
 @media (min-width: 1025px) {
@@ -29,5 +30,89 @@ ul {
 
 a {
   text-decoration: none;
+  color: #000;
+}
+
+.btn {
+  display: inline-block;
+  border: 1px solid #1e38ff;
+  padding: 0.2rem 0.6rem;
+  background-color: #1e38ff;
+  color: #fff;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ddd;
+  padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.navigation .btn {
+  margin-top: 0.2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+@media (orientation: landscape) {
+  .navigation {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.navigation .logo-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation .logo-nav__header {
+  font-size: 1.2rem;
+}
+
+.navigation .logo-nav__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navigation .logo-nav__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navigation .logo-nav__item a {
+  margin: 0 1rem;
+  font-size: 0.8rem;
+}
+
+.navigation .active {
+  font-weight: bold;
+  color: #1e38ff;
 }
 /*# sourceMappingURL=index.css.map */
