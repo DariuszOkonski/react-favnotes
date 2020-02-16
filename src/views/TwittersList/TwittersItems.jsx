@@ -1,6 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TwittersContext } from '../../contexts/TwittersContext/TwittersContext';
 
 const TwittersItems = () => {
+  const { twitters } = useContext(TwittersContext);
+
+  console.log(twitters)
   return (
     <div id="twittersItems">
       <h1>TwittersItems</h1>
