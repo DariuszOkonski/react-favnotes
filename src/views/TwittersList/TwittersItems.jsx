@@ -1,14 +1,17 @@
 import React, { useContext } from 'react';
 import { TwittersContext } from '../../contexts/TwittersContext/TwittersContext';
+import TwitterItem from './TwitterItem';
 
 const TwittersItems = () => {
   const { twitters } = useContext(TwittersContext);
 
-  console.log(twitters)
   return (
     <div id="twittersItems">
-      <h1>TwittersItems</h1>
-      <h1>TwittersItems</h1>
+      {
+        twitters.map(twitter =>
+          <TwitterItem key={twitter.id} {...twitter} />
+        )
+      }
     </div>
   );
 }
