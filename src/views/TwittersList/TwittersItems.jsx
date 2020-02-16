@@ -1,11 +1,10 @@
-import React, { useContext } from 'react';
-import { TwittersContext } from '../../contexts/TwittersContext/TwittersContext';
+import React from 'react';
 import TwitterItem from './TwitterItem';
+import EmptyDisplay from '../../components/EmptyDisplay';
 
-const TwittersItems = () => {
-  const { twitters } = useContext(TwittersContext);
+const TwittersItems = ({ twitters }) => {
 
-  return (
+  return twitters.length ? (
     <div id="twittersItems">
       {
         twitters.map(twitter =>
@@ -13,7 +12,9 @@ const TwittersItems = () => {
         )
       }
     </div>
-  );
+  ) : (
+      <EmptyDisplay />
+    );
 }
 
 export default TwittersItems;
