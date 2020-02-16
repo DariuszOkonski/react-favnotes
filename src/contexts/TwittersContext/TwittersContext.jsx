@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 
 export const TwittersContext = createContext();
 
@@ -10,8 +10,16 @@ const TwittersContextProvider = (props) => {
     { id: 4, picture: 'https://pbs.twimg.com/profile_images/1097518581250613249/4poDd0IC_400x400.png', name: 'Kent C. Dodds', description: 'Making software development more accessible · Husband, Father, Latter-day Saint, Teacher, OSS, GDE, @TC39 · @PayPalEng @eggheadio @FrontendMasters · #JS', twitterPage: 'https://twitter.com/kentcdodds' }
   ])
 
+  const removeTwitt = (id) => {
+    setTwitters(twitters.filter(twitt => twitt.id !== id));
+  }
+
+  useEffect(() => {
+    console.log(twitters)
+  }, [twitters])
+
   return (
-    <TwittersContext.Provider value={{ twitters }}>
+    <TwittersContext.Provider value={{ twitters, removeTwitt }}>
       {props.children}
     </TwittersContext.Provider>
   );
