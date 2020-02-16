@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import TwitterItem from './TwitterItem';
 import EmptyDisplay from '../../components/EmptyDisplay';
+import { TwittersContext } from '../../contexts/TwittersContext/TwittersContext';
 
-const TwittersItems = ({ twitters }) => {
+const TwittersItems = () => {
+  const { twitters } = useContext(TwittersContext);
 
   return twitters.length ? (
     <div id="twittersItems">
