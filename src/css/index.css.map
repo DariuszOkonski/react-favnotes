@@ -6,7 +6,8 @@
         "../sass/_variables.scss",
         "../sass/_reset.scss",
         "../sass/_navigation.scss",
-        "../sass/_viewContainer.scss"
+        "../sass/_viewContainer.scss",
+        "../sass/_twitters.scss"
     ],
     "names": [],
     "file": "index.css"
