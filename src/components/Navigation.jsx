@@ -12,8 +12,6 @@ const Navigation = () => {
           <li className="logo-nav__item"><NavLink to='/notes'>notes</NavLink></li>
         </ul>
       </section>
-
-
       <button className="btn">new item</button>
     </nav>
   );
