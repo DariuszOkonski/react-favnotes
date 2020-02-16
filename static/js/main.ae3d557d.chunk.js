@@ -1,2 +1,0 @@
-(this["webpackJsonp002-favnotes"]=this["webpackJsonp002-favnotes"]||[]).push([[0],{3:function(e,t,n){e.exports=n(8)},8:function(e,t,n){"use strict";n.r(t);var a=n(0),r=n.n(a),o=n(2);var s=function(){return r.a.createElement("div",{className:"App"},r.a.createElement("h1",null,"Favorite notes"))};n.n(o).a.render(r.a.createElement(s,null),document.getElementById("root"))}},[[3,1,2]]]);
-//# sourceMappingURL=main.ae3d557d.chunk.js.map

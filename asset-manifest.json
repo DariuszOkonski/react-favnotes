@@ -1,19 +1,22 @@
 {
   "files": {
-    "main.js": "/react-favnotes/static/js/main.ae3d557d.chunk.js",
-    "main.js.map": "/react-favnotes/static/js/main.ae3d557d.chunk.js.map",
+    "main.css": "/react-favnotes/static/css/main.ff35bcd5.chunk.css",
+    "main.js": "/react-favnotes/static/js/main.f1f96576.chunk.js",
+    "main.js.map": "/react-favnotes/static/js/main.f1f96576.chunk.js.map",
     "runtime-main.js": "/react-favnotes/static/js/runtime-main.f3bc6131.js",
     "runtime-main.js.map": "/react-favnotes/static/js/runtime-main.f3bc6131.js.map",
-    "static/js/2.c4405265.chunk.js": "/react-favnotes/static/js/2.c4405265.chunk.js",
-    "static/js/2.c4405265.chunk.js.map": "/react-favnotes/static/js/2.c4405265.chunk.js.map",
+    "static/js/2.a9e7af5f.chunk.js": "/react-favnotes/static/js/2.a9e7af5f.chunk.js",
+    "static/js/2.a9e7af5f.chunk.js.map": "/react-favnotes/static/js/2.a9e7af5f.chunk.js.map",
     "index.html": "/react-favnotes/index.html",
-    "precache-manifest.d03cb346f7afae2cf8ef1ddba4b27ff2.js": "/react-favnotes/precache-manifest.d03cb346f7afae2cf8ef1ddba4b27ff2.js",
+    "precache-manifest.da0889c45a3afa983e99b7917f54171c.js": "/react-favnotes/precache-manifest.da0889c45a3afa983e99b7917f54171c.js",
     "service-worker.js": "/react-favnotes/service-worker.js",
-    "static/js/2.c4405265.chunk.js.LICENSE.txt": "/react-favnotes/static/js/2.c4405265.chunk.js.LICENSE.txt"
+    "static/css/main.ff35bcd5.chunk.css.map": "/react-favnotes/static/css/main.ff35bcd5.chunk.css.map",
+    "static/js/2.a9e7af5f.chunk.js.LICENSE.txt": "/react-favnotes/static/js/2.a9e7af5f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.f3bc6131.js",
-    "static/js/2.c4405265.chunk.js",
-    "static/js/main.ae3d557d.chunk.js"
+    "static/js/2.a9e7af5f.chunk.js",
+    "static/css/main.ff35bcd5.chunk.css",
+    "static/js/main.f1f96576.chunk.js"
   ]
 }
