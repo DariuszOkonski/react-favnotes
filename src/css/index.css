@@ -241,4 +241,13 @@ img {
     text-align: left;
   }
 }
+
+.empty {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  padding: 3rem 0;
+  color: #818181;
+}
 /*# sourceMappingURL=index.css.map */
