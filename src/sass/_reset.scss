@@ -12,7 +12,7 @@ html,
 body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
-  min-height: 200vh;
+  // min-height: 200vh;
 
   @media(min-width: 1025px) {
     font-size: 22px;
@@ -30,6 +30,10 @@ a {
   color: $color-black;
 }
 
+img {
+  width: 100%;
+}
+
 // utilities
 .btn {
   display: inline-block;
@@ -37,4 +41,29 @@ a {
   padding: 0.2rem 0.6rem;
   background-color: $color-blue;
   color: $color-white;
+  cursor: pointer;
+  transition: all .2s;
+
+  &:hover {
+    background-color: lighten($color: $color-blue, $amount: 5%);
+  }
+
+  &-transparent {
+    color: $color-blue;
+    background-color: transparent;
+
+    &:hover {
+      background-color: lighten($color: $color-blue, $amount: 35%);
+    }
+  }
+}
+
+.header {
+  color: $color-blue;
+  font-size: 1.2rem;
+}
+
+.paragraph {
+  color: $color-dark-gray;
+  font-size: 1rem;
 }
