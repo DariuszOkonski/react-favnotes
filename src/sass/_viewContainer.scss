@@ -1,0 +1,13 @@
+#view-container {
+  background-color: yellow;
+  width: 100%;
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5rem;
+  padding-top: calc(1rem + 1.2rem + 3rem);
+
+  @media(orientation: landscape) {
+    padding-top: calc(1rem + 1.2rem + 1rem);
+  }
+}
