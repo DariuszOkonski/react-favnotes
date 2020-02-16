@@ -1,6 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { TwittersContext } from '../../contexts/TwittersContext/TwittersContext';
 
 const TwitterItem = ({ id, picture, name, description, twitterPage }) => {
+  const { removeTwitt } = useContext(TwittersContext);
+
   return (
     <div id="twitterItem">
       <div className="image">
@@ -15,7 +18,7 @@ const TwitterItem = ({ id, picture, name, description, twitterPage }) => {
           <a href={twitterPage} target="_blank" rel="noopener noreferrer">visit twitter page</a>
         </button>
 
-        <button className="btn btn-transparent">remove</button>
+        <button onClick={() => removeTwitt(id)} className="btn btn-transparent">remove</button>
       </div>
     </div>
   );
