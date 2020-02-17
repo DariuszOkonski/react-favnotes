@@ -315,4 +315,12 @@ img {
   margin: .2rem;
   cursor: pointer;
 }
+
+.application {
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: 80%;
+  font-size: 1rem;
+}
 /*# sourceMappingURL=index.css.map */
