@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import NewFormTwitter from '../components/NewFormTwitter';
+import NewFormArticle from '../components/NewFormArticle';
+import NewFormNotes from '../components/NewFormNotes';
 
 class NewItem extends Component {
   headerInfo = {
@@ -36,15 +39,15 @@ class NewItem extends Component {
   displayForm = () => {
     if (this.state.twitter) {
       return (
-        <h3>NewTwitter</h3>
+        <NewFormTwitter />
       )
     } else if (this.state.article) {
       return (
-        <h3>NewArticle</h3>
+        <NewFormArticle />
       )
     } else if (this.state.notes) {
       return (
-        <h3>NewNotes</h3>
+        <NewFormNotes />
       )
     } else {
       return (
