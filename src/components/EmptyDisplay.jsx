@@ -3,7 +3,7 @@ import React from 'react';
 const EmptyDisplay = () => {
   return (
     <div className="empty">
-      <p>There's nothing here yet, please add ome items!</p>
+      <p>There's nothing here yet, please add some items!</p>
     </div>
   );
 }
