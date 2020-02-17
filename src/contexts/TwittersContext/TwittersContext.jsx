@@ -14,10 +14,6 @@ const TwittersContextProvider = (props) => {
     setTwitters(twitters.filter(twitt => twitt.id !== id));
   }
 
-  useEffect(() => {
-    console.log(twitters)
-  }, [twitters])
-
   return (
     <TwittersContext.Provider value={{ twitters, removeTwitt }}>
       {props.children}
