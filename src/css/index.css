@@ -320,7 +320,22 @@ img {
   background-color: white;
   margin: 0 auto;
   margin-top: 2rem;
-  width: 80%;
+  width: 70%;
   font-size: 1rem;
+}
+
+.newForm {
+  padding: .2rem;
+  background-color: yellowgreen;
+}
+
+.newForm input,
+.newForm textarea {
+  display: block;
+  width: 100%;
+}
+
+.newForm textarea {
+  min-height: 100px;
 }
 /*# sourceMappingURL=index.css.map */
