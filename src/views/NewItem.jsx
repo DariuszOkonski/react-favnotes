@@ -1,36 +1,36 @@
 import React, { Component } from 'react';
 
 class NewItem extends Component {
+  headerInfo = {
+    twitter: 'Add new Twitter account',
+    article: 'Add new Article',
+    notes: 'Add new Note'
+  };
   state = {
     twitter: true,
     article: false,
     notes: false,
-    header: 'Add new Twitter account'
+    header: ''
+  }
+
+  componentDidMount() {
+    this.setState({
+      header: this.headerInfo.twitter
+    })
   }
 
   handleChange = (e) => {
-    if (e.target.id === 'twitter') {
-      this.setState({
-        twitter: true,
-        article: false,
-        notes: false,
-        header: 'Add new Twitter account'
-      })
-    } else if (e.target.id === 'article') {
-      this.setState({
-        twitter: false,
-        article: true,
-        notes: false,
-        header: 'Add new Article'
-      })
-    } else if (e.target.id === 'notes') {
-      this.setState({
-        twitter: false,
-        article: false,
-        notes: true,
-        header: 'Add new Note'
-      })
-    }
+    this.setState({
+      twitter: false,
+      article: false,
+      notes: false
+    });
+
+    this.setState({
+      [e.target.id]: true,
+      header: this.headerInfo[e.target.id]
+    });
+
   }
 
   render() {
