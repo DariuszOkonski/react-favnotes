@@ -1,0 +1,14 @@
+.newForm {
+  padding: .2rem;
+  background-color: yellowgreen;
+
+  input,
+  textarea {
+    display: block;
+    width: 100%;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+}
