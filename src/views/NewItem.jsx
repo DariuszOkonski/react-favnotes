@@ -33,6 +33,26 @@ class NewItem extends Component {
 
   }
 
+  displayForm = () => {
+    if (this.state.twitter) {
+      return (
+        <h3>NewTwitter</h3>
+      )
+    } else if (this.state.article) {
+      return (
+        <h3>NewArticle</h3>
+      )
+    } else if (this.state.notes) {
+      return (
+        <h3>NewNotes</h3>
+      )
+    } else {
+      return (
+        <h3>Something went wrong</h3>
+      )
+    }
+  }
+
   render() {
     const { twitter, article, notes, header } = this.state;
 
@@ -56,8 +76,15 @@ class NewItem extends Component {
               <input type="radio" name="radiobutton" id="notes" checked={notes} onChange={this.handleChange} />
             </label>
           </div>
-        </div>
 
+
+          <div className="application">
+            {
+              this.displayForm()
+            }
+          </div>
+
+        </div>
       </section>
     );
   }
