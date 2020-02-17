@@ -250,4 +250,69 @@ img {
   padding: 3rem 0;
   color: #818181;
 }
+
+#newItem {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: yellow;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#newItem .itemBoard {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  height: 80%;
+  background-color: #ddd;
+  border: 1px solid #1e38ff;
+  padding: 0.5rem;
+}
+
+#newItem .itemBoard .btn {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+}
+
+#newItem .itemBoard .header {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (orientation: landscape) {
+  #newItem .itemBoard .header {
+    font-size: 1.2rem;
+  }
+}
+
+#newItem .noteOption {
+  text-align: center;
+}
+
+#newItem .noteOption label {
+  margin: 0.2rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#newItem .noteOption label input[type="radio"] {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  padding: 2rem;
+  margin: .2rem;
+  color: red;
+}
 /*# sourceMappingURL=index.css.map */
