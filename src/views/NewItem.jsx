@@ -64,7 +64,7 @@ class NewItem extends Component {
 
         <div className="itemBoard">
           <button
-            className="btn"
+            className="btn btnClose"
             onClick={this.props.setFormOff}
           >x</button>
 
