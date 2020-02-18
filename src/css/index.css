@@ -257,7 +257,7 @@ img {
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: yellow;
+  background-color: rgba(0, 0, 0, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -279,7 +279,7 @@ img {
   padding: 0.5rem;
 }
 
-#newItem .itemBoard .btn {
+#newItem .itemBoard .btnClose {
   position: absolute;
   top: 0.2rem;
   right: 0.2rem;
@@ -317,25 +317,58 @@ img {
 }
 
 .application {
-  background-color: white;
   margin: 0 auto;
-  margin-top: 2rem;
+  margin-top: 1rem;
   width: 70%;
   font-size: 1rem;
 }
 
 .newForm {
   padding: .2rem;
-  background-color: yellowgreen;
 }
 
 .newForm input,
 .newForm textarea {
   display: block;
   width: 100%;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  padding: 0.2rem;
+  margin: 0.5rem 0;
+}
+
+@media (orientation: landscape) {
+  .newForm input,
+  .newForm textarea {
+    font-size: 0.8rem;
+    padding: 0.1rem;
+    margin: 0.2rem 0;
+  }
 }
 
 .newForm textarea {
   min-height: 100px;
+}
+
+@media (orientation: landscape) {
+  .newForm textarea {
+    min-height: 50px;
+  }
+}
+
+@media (min-width: 758px) {
+  .newForm textarea {
+    min-height: 150px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .newForm textarea {
+    min-height: 250px;
+  }
+}
+
+.newForm .btn-transparent:hover {
+  background-color: #818181;
 }
 /*# sourceMappingURL=index.css.map */
