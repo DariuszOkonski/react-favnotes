@@ -10,7 +10,7 @@ function App() {
   const setFormOn = () => {
     setIsFormOn(true);
   }
-  const setFromOff = () => {
+  const setFormOff = () => {
     setIsFormOn(false);
   }
 
@@ -21,7 +21,7 @@ function App() {
         <Navigation setFormOn={setFormOn} />
 
         {
-          isFormOn ? <NewItem setFromOff={setFromOff} /> : null
+          isFormOn ? <NewItem setFormOff={setFormOff} /> : null
         }
 
         <TwittersContextProvider>
