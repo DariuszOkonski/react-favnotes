@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-const Navigation = () => {
+const Navigation = ({ setFormOn }) => {
   return (
     <nav id="navigation">
       <section className="logo-nav">
@@ -12,7 +12,10 @@ const Navigation = () => {
           <li className="logo-nav__item"><NavLink to='/notes'>notes</NavLink></li>
         </ul>
       </section>
-      <button className="btn">new item</button>
+      <button
+        className="btn"
+        onClick={setFormOn}
+      >new item</button>
     </nav>
   );
 }
