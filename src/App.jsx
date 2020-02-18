@@ -20,14 +20,12 @@ function App() {
       <div className="App">
         <Navigation setFormOn={setFormOn} />
 
-        {
-          isFormOn ? <NewItem setFormOff={setFormOff} /> : null
-        }
-
         <TwittersContextProvider>
+          {
+            isFormOn ? <NewItem setFormOff={setFormOff} /> : null
+          }
 
           <ViewContainer />
-
         </TwittersContextProvider>
       </div>
     </BrowserRouter>
