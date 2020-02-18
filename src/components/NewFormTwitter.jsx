@@ -3,15 +3,15 @@ import React from 'react';
 const NewFormTwitter = () => {
   return (
     <form className="newForm">
-      <input type="text" placeholder="Twitter Name..." />
+      <input type="text" placeholder="Twitter Name..." required />
 
-      <input type="text" placeholder="Twitter Link..." />
+      <input type="text" placeholder="Twitter Link..." required />
 
-      <input type="text" placeholder="Image Url..." />
+      <input type="text" placeholder="Image Url..." required />
 
-      <textarea placeholder="Description..."></textarea>
+      <textarea placeholder="Description..." required></textarea>
 
-      <button>Add New Item</button>
+      <button className="btn btn-transparent">Add New Item</button>
     </form>
   );
 }
