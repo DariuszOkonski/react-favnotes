@@ -63,7 +63,11 @@ class NewItem extends Component {
       <section id="newItem">
 
         <div className="itemBoard">
-          <button className="btn">x</button>
+          <button
+            className="btn"
+            onClick={this.props.setFromOff}
+          >x</button>
+
           <h3 className="header">{header}</h3>
 
           <div className="noteOption">
