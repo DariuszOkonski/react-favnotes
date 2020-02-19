@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { TwittersContext } from '../contexts/TwittersContext/TwittersContext';
 import { AppContext } from '../contexts/AppContext/AppContext';
 
-// const NewFormTwitter = ({ setFormOff }) => {
 const NewFormTwitter = () => {
   const { addTwitt } = useContext(TwittersContext);
   const { setFormOff } = useContext(AppContext);
