@@ -15,8 +15,6 @@ const TwittersContextProvider = (props) => {
   }
 
   const addTwitt = (picture, name, description, twitterPage) => {
-    console.log('TwittersContext => addTwitt()');
-
     setTwitters([...twitters, { id: uuid(), picture, name, description, twitterPage }])
   }
 
