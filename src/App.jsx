@@ -6,6 +6,7 @@ import TwittersContextProvider from './contexts/TwittersContext/TwittersContext'
 import NewItem from './views/NewItem';
 import { AppContext } from './contexts/AppContext/AppContext';
 import ArticlesContextProvider from './contexts/ArticlesContext/ArticlesContext';
+import NotesContextProvider from './contexts/NotesContext/NotesContext';
 
 function App() {
   const [isFormOn, setIsFormOn] = useState(false);
@@ -24,14 +25,17 @@ function App() {
 
         <TwittersContextProvider>
           <ArticlesContextProvider>
+            <NotesContextProvider>
 
-            <AppContext.Provider value={{ setFormOff }}>
-              {
-                isFormOn ? <NewItem setFormOff={setFormOff} /> : null
-              }
-            </AppContext.Provider>
+              <AppContext.Provider value={{ setFormOff }}>
+                {
+                  isFormOn ? <NewItem setFormOff={setFormOff} /> : null
+                }
+              </AppContext.Provider>
 
-            <ViewContainer />
+              <ViewContainer />
+
+            </NotesContextProvider>
           </ArticlesContextProvider>
         </TwittersContextProvider>
       </div>
