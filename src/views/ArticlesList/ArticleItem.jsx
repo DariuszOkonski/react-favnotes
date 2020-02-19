@@ -1,17 +1,23 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { ArticlesContext } from '../../contexts/ArticlesContext/ArticlesContext';
 
-const ArticleItem = () => {
+const ArticleItem = ({ id, name, description, twitterPage }) => {
+  const { removeArticle } = useContext(ArticlesContext);
+
   return (
     <div id="articleItem">
       <div className="description">
-        <h2 className="header">Article Name</h2>
-        <p className="paragraph">Article Description</p>
+        <h2 className="header">{name}</h2>
+        <p className="paragraph">{description}</p>
 
         <button className="btn btn-transparent">
-          <a href="#" target="_blank" rel="noopener noreferrer">visit twitter page</a>
+          <a href={twitterPage} target="_blank" rel="noopener noreferrer">visit twitter page</a>
         </button>
 
-        <button className="btn btn-transparent">remove</button>
+        <button
+          onClick={() => removeArticle(id)}
+          className="btn btn-transparent"
+        >remove</button>
       </div>
     </div>
   );
