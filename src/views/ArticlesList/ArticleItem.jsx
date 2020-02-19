@@ -4,8 +4,8 @@ const ArticleItem = () => {
   return (
     <div id="articleItem">
       <div className="description">
-        <h2 className="header">Name</h2>
-        <p className="paragraph">Description</p>
+        <h2 className="header">Article Name</h2>
+        <p className="paragraph">Article Description</p>
 
         <button className="btn btn-transparent">
           <a href="#" target="_blank" rel="noopener noreferrer">visit twitter page</a>
