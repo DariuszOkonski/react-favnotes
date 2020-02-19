@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import TwittersItems from './TwittersList/TwittersItems';
-import NoteItem from './NotesList/NoteItem';
 import ArticlesItems from './ArticlesList/ArticlesItems';
+import NotesItems from './NotesList/NotesItems';
 
 const ViewContainer = () => {
 
@@ -11,7 +11,7 @@ const ViewContainer = () => {
       <Switch>
         <Route exact path="/" render={() => <TwittersItems />} />
         <Route exact path="/articles" render={() => <ArticlesItems />} />
-        <Route exact path="/notes" render={() => <NoteItem />} />
+        <Route exact path="/notes" render={() => <NotesItems />} />
         <Route render={() => <div>Error</div>} />
       </Switch>
 
