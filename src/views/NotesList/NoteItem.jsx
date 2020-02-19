@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { NotesContext } from '../../contexts/NotesContext/NotesContext';
 
-const NoteItem = () => {
+const NoteItem = ({ id, name, description }) => {
+  const { removeNote } = useContext(NotesContext);
+
   return (
     <div id="noteItem">
       <div className="description">
-        <h2 className="header">Note Name</h2>
-        <p className="paragraph">Note Description</p>
+        <h2 className="header">{name}</h2>
+        <p className="paragraph">{description}</p>
 
-        <button className="btn btn-transparent">remove</button>
+        <button
+          onClick={() => removeNote(id)}
+          className="btn btn-transparent"
+        >remove</button>
       </div>
     </div>
   );
