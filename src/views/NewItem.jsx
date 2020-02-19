@@ -39,7 +39,7 @@ class NewItem extends Component {
   displayForm = () => {
     if (this.state.twitter) {
       return (
-        <NewFormTwitter setFormOff={this.props.setFormOff} />
+        <NewFormTwitter />
       )
     } else if (this.state.article) {
       return (
