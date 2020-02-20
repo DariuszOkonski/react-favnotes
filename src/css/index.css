@@ -458,4 +458,50 @@ img {
     text-align: left;
   }
 }
+
+#edit {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#edit .editBoard {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  height: 80%;
+  background-color: #ddd;
+  border: 1px solid #1e38ff;
+  padding: 0.5rem;
+}
+
+#edit .editBoard .btnClose {
+  position: absolute;
+  top: 0.2rem;
+  right: 0.2rem;
+}
+
+#edit .editBoard .header {
+  text-align: center;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media (orientation: landscape) {
+  #edit .editBoard .header {
+    font-size: 1.2rem;
+  }
+}
 /*# sourceMappingURL=index.css.map */
