@@ -56,7 +56,7 @@ const NewFormTwitter = () => {
         onChange={(e) => setDescription(e.target.value)}
       ></textarea>
 
-      <button className="btn btn-transparent">Add New Item</button>
+      <button className="btn btn-transparent">Add New Twitt</button>
     </form>
   );
 }
