@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { TwittersContext } from '../../contexts/TwittersContext/TwittersContext';
+import { AppContext } from '../../contexts/AppContext/AppContext';
 
 const TwitterItem = ({ id, picture, name, description, twitterPage }) => {
   const { removeTwitt } = useContext(TwittersContext);
+  const { setFormTwitterOn } = useContext(AppContext);
 
   return (
     <div id="twitterItem">
@@ -18,7 +20,8 @@ const TwitterItem = ({ id, picture, name, description, twitterPage }) => {
           <a href={twitterPage} target="_blank" rel="noopener noreferrer">visit twitter page</a>
         </button>
 
-        <button onClick={() => removeTwitt(id)} className="btn btn-transparent">remove</button>
+        <button onClick={() => setFormTwitterOn(id)} className="btn btn-transparent">edit</button>
+        <button onClick={() => removeTwitt(id)} style={{ color: 'white' }} className="btn">remove</button>
       </div>
     </div>
   );
