@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import Navigation from './components/Navigation';
 import { BrowserRouter } from 'react-router-dom';
 import ViewContainer from './views/ViewContainer';
@@ -7,8 +7,21 @@ import NewItem from './views/NewItem';
 import { AppContext } from './contexts/AppContext/AppContext';
 import ArticlesContextProvider from './contexts/ArticlesContext/ArticlesContext';
 import NotesContextProvider from './contexts/NotesContext/NotesContext';
+import EditTwitter from './views/Edit/EditTwitter';
 
 function App() {
+  const [id, setId] = useState(null);
+
+  const [twitter, setTwitter] = useState(false);
+  const setFormTwitterOn = (id) => {
+    setTwitter(true)
+    setId(id);
+  }
+  const setFormTwitterOff = () => {
+    setTwitter(false);
+    setId(null);
+  }
+
   const [isFormOn, setIsFormOn] = useState(false);
   const setFormOn = () => {
     setIsFormOn(true);
@@ -27,13 +40,21 @@ function App() {
           <ArticlesContextProvider>
             <NotesContextProvider>
 
-              <AppContext.Provider value={{ setFormOff }}>
-                {
-                  isFormOn ? <NewItem setFormOff={setFormOff} /> : null
-                }
-              </AppContext.Provider>
+              <AppContext.Provider value={{ setFormOff, setFormTwitterOn, setFormTwitterOff }}>
+                <Fragment>
+                  {
+                    isFormOn ? <NewItem setFormOff={setFormOff} /> : null
+                  }
+                </Fragment>
+                <Fragment>
+                  {
+                    twitter ? <EditTwitter id={id} /> : null
+                  }
+                </Fragment>
 
-              <ViewContainer />
+
+                <ViewContainer />
+              </AppContext.Provider>
 
             </NotesContextProvider>
           </ArticlesContextProvider>
