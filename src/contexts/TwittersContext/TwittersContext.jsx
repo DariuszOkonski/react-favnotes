@@ -18,8 +18,14 @@ const TwittersContextProvider = (props) => {
     setTwitters([...twitters, { id: uuid(), picture, name, description, twitterPage }])
   }
 
+  const editTwitt = (id, name, picture, description, twitterPage) => {
+    //TODO Edit Option
+    console.log('TwittersContext');
+    console.log(id, name, picture, description, twitterPage);
+  }
+
   return (
-    <TwittersContext.Provider value={{ twitters, removeTwitt, addTwitt }}>
+    <TwittersContext.Provider value={{ twitters, removeTwitt, addTwitt, editTwitt }}>
       {props.children}
     </TwittersContext.Provider>
   );
