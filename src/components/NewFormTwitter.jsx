@@ -1,6 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { TwittersContext } from '../contexts/TwittersContext/TwittersContext';
 import { AppContext } from '../contexts/AppContext/AppContext';
+import tempImg from '../img/mountain.jpg';
+import { useEffect } from 'react';
 
 const NewFormTwitter = () => {
   const { addTwitt } = useContext(TwittersContext);
@@ -14,13 +16,33 @@ const NewFormTwitter = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    addTwitt(picture, name, description, twitterPage);
+
+    const image = pictureValidation();
+
+    addTwitt(image, name, description, twitterPage);
 
     setName('');
     setTwitterPage('');
     setPicture('');
     setDescription('');
     setFormOff();
+  }
+
+  const pictureValidation = () => {
+    const validationExtencions = ['.jpg', '.png', '.jpeg'];
+    const index = picture.lastIndexOf('.');
+
+    if (index === -1) {
+      return tempImg
+    } else {
+      const extensione = picture.substr(index);
+
+      console.log(validationExtencions.find(el => el === extensione));
+      if (validationExtencions.find(el => el === extensione) !== undefined)
+        return picture;
+      else
+        return tempImg;
+    }
   }
 
   return (
