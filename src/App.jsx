@@ -9,6 +9,7 @@ import ArticlesContextProvider from './contexts/ArticlesContext/ArticlesContext'
 import NotesContextProvider from './contexts/NotesContext/NotesContext';
 import EditTwitter from './views/Edit/EditTwitter';
 import EditArticle from './views/Edit/EditArticle';
+import EditNote from './views/Edit/EditNote';
 
 function App() {
   const [id, setId] = useState(null);
@@ -33,6 +34,16 @@ function App() {
     setId(null);
   }
 
+  const [note, setNote] = useState(false);
+  const setFormNoteOn = (id) => {
+    setNote(true);
+    setId(id);
+  }
+  const setFormNoteOff = () => {
+    setNote(false);
+    setId(null);
+  }
+
   const [isFormOn, setIsFormOn] = useState(false);
   const setFormOn = () => {
     setIsFormOn(true);
@@ -51,7 +62,7 @@ function App() {
           <ArticlesContextProvider>
             <NotesContextProvider>
 
-              <AppContext.Provider value={{ setFormOff, setFormTwitterOn, setFormTwitterOff, setFormArticleOn, setFormArticleOff }}>
+              <AppContext.Provider value={{ setFormOff, setFormTwitterOn, setFormTwitterOff, setFormArticleOn, setFormArticleOff, setFormNoteOn, setFormNoteOff }}>
                 <Fragment>
                   {
                     isFormOn ? <NewItem setFormOff={setFormOff} /> : null
@@ -63,6 +74,9 @@ function App() {
                   }
                   {
                     article ? <EditArticle id={id} /> : null
+                  }
+                  {
+                    note ? <EditNote id={id} /> : null
                   }
                 </Fragment>
 
