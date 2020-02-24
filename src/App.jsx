@@ -8,6 +8,7 @@ import { AppContext } from './contexts/AppContext/AppContext';
 import ArticlesContextProvider from './contexts/ArticlesContext/ArticlesContext';
 import NotesContextProvider from './contexts/NotesContext/NotesContext';
 import EditTwitter from './views/Edit/EditTwitter';
+import EditArticle from './views/Edit/EditArticle';
 
 function App() {
   const [id, setId] = useState(null);
@@ -19,6 +20,16 @@ function App() {
   }
   const setFormTwitterOff = () => {
     setTwitter(false);
+    setId(null);
+  }
+
+  const [article, setArticle] = useState(false);
+  const setFormArticleOn = (id) => {
+    setArticle(true);
+    setId(id);
+  }
+  const setFormArticleOff = () => {
+    setArticle(false);
     setId(null);
   }
 
@@ -40,7 +51,7 @@ function App() {
           <ArticlesContextProvider>
             <NotesContextProvider>
 
-              <AppContext.Provider value={{ setFormOff, setFormTwitterOn, setFormTwitterOff }}>
+              <AppContext.Provider value={{ setFormOff, setFormTwitterOn, setFormTwitterOff, setFormArticleOn, setFormArticleOff }}>
                 <Fragment>
                   {
                     isFormOn ? <NewItem setFormOff={setFormOff} /> : null
@@ -49,6 +60,9 @@ function App() {
                 <Fragment>
                   {
                     twitter ? <EditTwitter id={id} /> : null
+                  }
+                  {
+                    article ? <EditArticle id={id} /> : null
                   }
                 </Fragment>
 
