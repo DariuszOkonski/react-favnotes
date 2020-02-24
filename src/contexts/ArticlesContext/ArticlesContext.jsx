@@ -17,8 +17,23 @@ const ArticlesContextProvider = (props) => {
     setArticles([...articles, { id: uuid(), name, description, twitterPage }])
   }
 
+  const editArticle = (id, name, description, twitterPage) => {
+    const editedElement = {
+      id, name, description, twitterPage
+    }
+
+    const tempArr = articles.map(el => {
+      if (el.id === id) {
+        return editedElement;
+      }
+      return el;
+    });
+
+    setArticles(tempArr);
+  }
+
   return (
-    <ArticlesContext.Provider value={{ articles, removeArticle, addArticle }}>
+    <ArticlesContext.Provider value={{ articles, removeArticle, addArticle, editArticle }}>
       {props.children}
     </ArticlesContext.Provider>
   );
