@@ -3,8 +3,8 @@ import { ArticlesContext } from '../contexts/ArticlesContext/ArticlesContext';
 import { AppContext } from '../contexts/AppContext/AppContext';
 
 const NewFormArticle = () => {
-  const { addArticle } = useContext(ArticlesContext);
-  const { setFormOff } = useContext(AppContext)
+  const { addArticle, editArticle } = useContext(ArticlesContext);
+  const { setFormOff } = useContext(AppContext);
 
   const [name, setName] = useState('');
   const [twitterPage, setTwitterPage] = useState('');
