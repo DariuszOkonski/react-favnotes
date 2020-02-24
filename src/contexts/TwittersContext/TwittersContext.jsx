@@ -19,9 +19,18 @@ const TwittersContextProvider = (props) => {
   }
 
   const editTwitt = (id, name, picture, description, twitterPage) => {
-    //TODO Edit Option
-    console.log('TwittersContext');
-    console.log(id, name, picture, description, twitterPage);
+    const editedElement = {
+      id, name, picture, description, twitterPage
+    }
+
+    const tempArr = twitters.map(el => {
+      if (el.id === id) {
+        return editedElement;
+      }
+      return el;
+    })
+
+    setTwitters(tempArr);
   }
 
   return (
