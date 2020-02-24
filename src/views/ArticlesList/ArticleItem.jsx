@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { ArticlesContext } from '../../contexts/ArticlesContext/ArticlesContext';
+import { AppContext } from '../../contexts/AppContext/AppContext';
 
 const ArticleItem = ({ id, name, description, twitterPage }) => {
   const { removeArticle } = useContext(ArticlesContext);
+  const { setFormArticleOn } = useContext(AppContext);
 
   return (
     <div id="articleItem">
@@ -13,6 +15,11 @@ const ArticleItem = ({ id, name, description, twitterPage }) => {
         <button className="btn btn-transparent">
           <a href={twitterPage} target="_blank" rel="noopener noreferrer">visit twitter page</a>
         </button>
+
+        <button
+          onClick={() => setFormArticleOn(id)}
+          className="btn btn-transparent"
+        >edit</button>
 
         <button
           onClick={() => removeArticle(id)}
