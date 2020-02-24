@@ -19,8 +19,23 @@ const NotesContextProvider = (props) => {
     setNotes([...notes, { id: uuid(), name, description }]);
   }
 
+  const editNote = (id, name, description) => {
+    const editedElement = {
+      id, name, description
+    }
+
+    const tempArr = notes.map(el => {
+      if (el.id === id) {
+        return editedElement;
+      }
+      return el;
+    });
+
+    setNotes(tempArr);
+  }
+
   return (
-    <NotesContext.Provider value={{ notes, removeNote, addNote }}>
+    <NotesContext.Provider value={{ notes, removeNote, addNote, editNote }}>
       {props.children}
     </NotesContext.Provider>
   );
