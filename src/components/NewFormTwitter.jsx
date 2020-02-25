@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react';
 import { TwittersContext } from '../contexts/TwittersContext/TwittersContext';
 import { AppContext } from '../contexts/AppContext/AppContext';
 import tempImg from '../img/mountain.jpg';
-import { useEffect } from 'react';
 
 const NewFormTwitter = () => {
   const { addTwitt } = useContext(TwittersContext);
@@ -37,7 +36,6 @@ const NewFormTwitter = () => {
     } else {
       const extensione = picture.substr(index);
 
-      console.log(validationExtencions.find(el => el === extensione));
       if (validationExtencions.find(el => el === extensione) !== undefined)
         return picture;
       else
