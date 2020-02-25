@@ -13,6 +13,7 @@ It is possible to edit, remove or add new twitters, articles and notes and then 
 - React-router-dom
 - HTML
 - SCSS
-- FLEXBOX
+- CSS Flexbox
+- CSS Grid
 - media queries
 - Hooks(useState, useEffect)
